@@ -1,0 +1,27 @@
+<nav>
+  <div class="nav-wrapper">
+      <a href="#!" class="brand-logo"><strong>SiliconBrainz</strong></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+          <li><a href="/">Home</a></li>
+          {% if user.is_authenticated %}
+              <li><a href="/account"><strong>{{user.username}}</strong></a></li>
+              <li><a href="/logout">Logout</a></li>
+              {% else %}
+                  <li><a href="/register">Register</a></li>
+                  <li><a href="/login">Login</a></li>
+          {%  endif %}
+      </ul>
+  </div>
+</nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="/">Home</a></li>
+      {% if user.is_authenticated %}
+          <li><a href="/account"><em>{{user.username}}</em></a></li>
+          <li><a href="/logout">Logout</a></li>
+          {% else %}
+          <li><a href="/register">Register</a></li>
+          <li><a href="/login">Login</a></li>
+      {% endif %}
+  </ul>

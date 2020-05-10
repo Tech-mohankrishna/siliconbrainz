@@ -1,0 +1,21 @@
+{% extends 'main/header.html' %}
+
+{% block content %}
+
+    <div class="row">
+        {% for pic, partone in part_ones.items %}
+
+            <div class="col s12 m6 l6">
+                <a href="{{partone}}", style="color:rgb(7, 0, 0)">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <div class="card-title">{{pic.pictures_series}}</div>
+                            <!--<p style="font-size:70%">Published {{tut.tutorial_published}}</p>-->
+                            <p>{{pic.series_summary}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

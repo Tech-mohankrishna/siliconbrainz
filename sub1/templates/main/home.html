@@ -1,0 +1,22 @@
+{% extends "main/header.html" %}
+
+{% block content %}
+<div class="row">
+      {% for i in pictures %}
+            <div class="col s12 m6 l3">
+              <div class="card red darken-1">
+                <div class="card-content white-text">
+                 <span class="card-title">{{i.pictures_title}}</span>
+                   <p style=font-size:80%>{{i.pictures_published}}</p>
+                   <p>{{i.pictures_content|safe}}</p>
+                   <p>{{i.pictures_thumb}}</p>
+                 </div>
+               <div class="card-action">
+                    <a href="#">Click to Open</a>
+                </div>
+                </div>
+            </div>
+        {%   endfor %}
+      
+    </div>
+    {% endblock %}   
