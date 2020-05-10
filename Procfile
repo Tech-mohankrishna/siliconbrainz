@@ -1,1 +1,1 @@
-web: gunicorn wp.wsgi
+web: gunicorn wp.wsgi --logfile -
