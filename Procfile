@@ -1,1 +1,1 @@
-web: wp.wsgi --logfile -
+web: sub1.wsgi --logfile -
